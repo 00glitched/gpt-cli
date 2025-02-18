@@ -7,7 +7,14 @@ python-based chat-gpt command line interface
   - argparse
 
 ## How to install
+- Give execution permission to ```install.sh```
+```sh
+chmod -x install.sh
+```
 - Run ```install.sh``` as super user
+```sh
+sudo ./install.sh
+```
 
 ## How to use
 - Run ```gpt-cli``` command
@@ -15,9 +22,9 @@ python-based chat-gpt command line interface
 ## Examples
 - Using by default option
 ```sh
-gpt-cli "Say hello world!"
+gpt-cli "Say hello world"
 ```
 - Selecting model
 ```sh
-gpt-cli --model gpt-4o-mini "Say hello world!"
+gpt-cli --model gpt-4o-mini "Say hello world"
 ```
