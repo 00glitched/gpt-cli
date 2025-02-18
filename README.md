@@ -5,6 +5,9 @@ python-based chat-gpt command line interface
 - Python 3 (with pip)
   - g4f
   - argparse
+```sh
+pip install PKGNAME
+```
 
 ## How to install
 - Give execution permission to ```install.sh```
