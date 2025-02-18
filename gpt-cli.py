@@ -17,7 +17,7 @@ def chat_with_gpt(prompt, model="gpt-4o-mini"):
             messages=[{"role": "user", "content": prompt}],
             web_search=False
         )
-        print(response)
+        print(response.choices[0].message.content)
     finally:
         pass
 
