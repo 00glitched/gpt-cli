@@ -18,16 +18,37 @@ chmod -x install.sh
 ```sh
 sudo ./install.sh
 ```
-
+- Alternative automated install
+```sh
+sudo ./installwithdeps.sh
+```
 ## How to use
-- Run ```gpt-cli``` command
+- Run ```ai-cli``` command
+
+## Arguments
+```
+	-m | --model 		: AI model to response
+	-p | --pretty 		: Show text output as pretty markdown
+	-t | --historial 	: Remember actual conversation
+	-s | --save			: (Not implemented) save historial
+
+```
+
 
 ## Examples
 - Using by default option
 ```sh
-gpt-cli "Say hello world"
+ai-cli "Say hello world"
 ```
 - Selecting model
 ```sh
-gpt-cli --model gpt-4o-mini "Say hello world"
+ai-cli --model gpt-4o-mini "Say hello world"
+```
+- Selecting pretty mode
+```sh
+ai-cli --pretty "Say hello world"
+```
+- Selecting loop mode
+```sh
+ai-cli --historial "Say hello world"
 ```
