@@ -5,6 +5,7 @@ python-based chat-gpt command line interface
 - Python 3 (with pip)
   - g4f
   - argparse
+  - mdv
 ```sh
 pip install PKGNAME
 ```
