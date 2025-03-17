@@ -31,7 +31,7 @@ sudo ./installwithdeps.sh
 	-m | --model 		: AI model to response
 	-p | --pretty 		: Show text output as pretty markdown
 	-t | --historial 	: Remember actual conversation
-	-s | --save			: (Not implemented) save historial
+	-s | --save		: (Not implemented) save historial
 
 ```
 
