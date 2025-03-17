@@ -13,7 +13,7 @@ pip0="argparse"
 pip1="g4f"
 pip2="mdv"
 
-name="gpt-cli"
+name="ai-cli"
 
 error=0
 
