@@ -71,7 +71,7 @@ def main():
         args = parser.parse_args()
     
     history = exit = False
-    history = args.historial
+    history = args.talk
     if history==False:
         print("\n\033[96m===> "+args.prompt)
         print("\033[1;37m")
