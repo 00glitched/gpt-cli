@@ -28,7 +28,7 @@ chmod -x install.sh
 
 ## Arguments
 ```
-	-h | --help			: Show arguments
+	-h | --help		: Show arguments
 	-m | --model 		: AI model to response
 	-p | --pretty 		: Show text output as pretty markdown
 	-t | --talk 		: Remember actual conversation
