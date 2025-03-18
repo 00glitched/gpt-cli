@@ -6,7 +6,7 @@ pkgm0="apt"
 pkgm1="dnf"
 pkgm2="dpkg"
 
-exec0="python"
+exec0="python3"
 exec1="pip"
 
 pip0="argparse"
@@ -23,15 +23,15 @@ then
 else
 	if command -v $exec0 2>&1 >/dev/null
 	then
-		$pkgm0 install $exec0
+		sudo $pkgm0 install $exec0
 	else
 		if command -v $pkgm1 2>&1 >/dev/null
 		then
-			$pkgm1 install $exec0
+			sudo $pkgm1 install $exec0
 		else
 			if command -v $pkgm2 2>&1 >/dev/null
 			then
-				$pkgm2 install $exec0
+				sudo $pkgm2 install $exec0
 			else
 				echo -e "$bad Dependency is not satisfied: $exec0 is not installed."
 				error=1
@@ -46,15 +46,15 @@ then
 else
 	if command -v $pkgm0 2>&1 >/dev/null
 	then
-		$pkgm0 install $exec1
+		sudo $pkgm0 install $exec1
 	else
 		if command -v $pkgm1 2>&1 >/dev/null
 		then
-			$pkgm1 install $exec1
+			sudo $pkgm1 install $exec1
 		else
 			if command -v $pkgm2 2>&1 >/dev/null
 			then
-				$pkgm2 install $exec1
+				sudo $pkgm2 install $exec1
 			else
 				echo -e "$bad Dependency is not satisfied: $exec1 is not installed."
 				error=1
