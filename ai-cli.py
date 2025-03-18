@@ -18,7 +18,12 @@ except ImportError:
 
 HOME=str(os.getenv("HOME"))
 PATH=str(os.getcwd())+"/"
-system="Eres una IA"
+LANG=str(os.getenv("LANG"))[0:2]
+system=""
+if LANG=="es":
+    system="Eres una IA"
+else:
+    system="You are an AI"
 input_history=[{"role": "system", "content": system}]
 client = Client()
 
@@ -47,13 +52,23 @@ def chat(input_prompt,model="gpt-4o-mini",pretty=False,save=False):
  
 
 def main():
-    parser = argparse.ArgumentParser(description="CLI para consultar con IA")
-    parser.add_argument("prompt", type=str, help="Pregunta o mensaje")
-    parser.add_argument("-m","--model", type=str, default="gpt-4o-mini", help="Modelo a usar (por defecto: gpt-4o-mini)")
-    parser.add_argument("-p","--pretty", action="store_true", help="Impresion bonita en pantalla estilo markdown")
-    parser.add_argument("-t","--historial", action="store_true", help="Usar el chat en modo historial")
-    parser.add_argument("-s","--save", action="store_true", help="Guardar el historial")	
-    args = parser.parse_args()
+    args={}
+    if LANG=="es":
+        parser = argparse.ArgumentParser(description="CLI para consultar con IA")
+        parser.add_argument("prompt", type=str, help="Pregunta o mensaje")
+        parser.add_argument("-m","--model", type=str, default="gpt-4o-mini", help="Modelo a usar (por defecto: gpt-4o-mini)")
+        parser.add_argument("-p","--pretty", action="store_true", help="Impresion bonita en pantalla estilo markdown")
+        parser.add_argument("-t","--historial", action="store_true", help="Usar el chat en modo bucle")
+        parser.add_argument("-s","--save", action="store_true", help="Guardar el historial")
+        args = parser.parse_args()
+    else:
+        parser = argparse.ArgumentParser(description="CLI to consult with AI")
+        parser.add_argument("prompt", type=str, help="Question or message")
+        parser.add_argument("-m","--model", type=str, default="gpt-4o-mini", help="Model to use (default: gpt-4o-mini)")
+        parser.add_argument("-p","--pretty", action="store_true", help="Pretty print on screen in markdown style")
+        parser.add_argument("-t","--historial", action="store_true", help="Use chat in loop mode")
+        parser.add_argument("-s","--save", action="store_true", help="Save the history")
+        args = parser.parse_args()
     
     history = exit = False
     history = args.historial
