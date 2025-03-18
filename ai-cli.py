@@ -58,7 +58,7 @@ def main():
         parser.add_argument("prompt", type=str, help="Pregunta o mensaje")
         parser.add_argument("-m","--model", type=str, default="gpt-4o-mini", help="Modelo a usar (por defecto: gpt-4o-mini)")
         parser.add_argument("-p","--pretty", action="store_true", help="Impresion bonita en pantalla estilo markdown")
-        parser.add_argument("-t","--historial", action="store_true", help="Usar el chat en modo bucle")
+        parser.add_argument("-t","--talk", action="store_true", help="Usar el chat en modo bucle")
         parser.add_argument("-s","--save", action="store_true", help="Guardar el historial")
         args = parser.parse_args()
     else:
@@ -66,7 +66,7 @@ def main():
         parser.add_argument("prompt", type=str, help="Question or message")
         parser.add_argument("-m","--model", type=str, default="gpt-4o-mini", help="Model to use (default: gpt-4o-mini)")
         parser.add_argument("-p","--pretty", action="store_true", help="Pretty print on screen in markdown style")
-        parser.add_argument("-t","--historial", action="store_true", help="Use chat in loop mode")
+        parser.add_argument("-t","--talk", action="store_true", help="Use chat in loop mode")
         parser.add_argument("-s","--save", action="store_true", help="Save the history")
         args = parser.parse_args()
     
