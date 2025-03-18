@@ -15,24 +15,24 @@ pip install PKGNAME
 ```sh
 chmod -x install.sh
 ```
-- Run ```install.sh``` as super user
+- Run ```install.sh```
 ```sh
-sudo ./install.sh
+./install.sh
 ```
 - Alternative automated install
 ```sh
-sudo ./installwithdeps.sh
+./installwithdeps.sh
 ```
 ## How to use
 - Run ```ai-cli``` command
 
 ## Arguments
 ```
+	-h | --help			: Show arguments
 	-m | --model 		: AI model to response
 	-p | --pretty 		: Show text output as pretty markdown
-	-t | --historial 	: Remember actual conversation
-	-s | --save		: (Not implemented) save historial
-
+	-t | --talk 		: Remember actual conversation
+	-s | --save		: (Not implemented) save in a file
 ```
 
 
@@ -51,5 +51,5 @@ ai-cli --pretty "Say hello world"
 ```
 - Selecting loop mode
 ```sh
-ai-cli --historial "Say hello world"
+ai-cli --talk "Say hello world"
 ```
